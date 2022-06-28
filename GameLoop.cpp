@@ -1,4 +1,7 @@
+#define SDL_MAIN_HANDLED
+
 #include "Game_Loop.h"
+#include "SDL.h"
 
 Game_Loop::Game_Loop()
 {}
@@ -57,6 +60,7 @@ void Game_Loop::handleEvents()
 void Game_Loop::update()
 {
 	count++;
+	std::cout << count << std::endl;
 }
 
 void Game_Loop::render()

@@ -2,7 +2,7 @@
 
 Game_Loop* game = nullptr;
 
-int main(int argc, const char *argv[]) 
+int main(int argc,char *argv[]) 
 {
 
 	game = new Game_Loop();
