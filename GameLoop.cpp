@@ -1,9 +1,12 @@
+#define SDL_MAIN_HANDLED
+
 #include "Game_Loop.h"
+#include "SDL.h"
 
 Game_Loop::Game_Loop()
 {}
 
-Game_Loop::~Game()
+Game_Loop::~Game_Loop()
 {}
 
 
@@ -19,7 +22,7 @@ void Game_Loop::init(const char *title, int xpos, int ypos, int width, int heigh
 	{
 		std::cout << "Subsystem Initialised... " << std::endl;
 
-		window = SDL_CreateWindow(title, xpos, width, height, flags);
+		window = SDL_CreateWindow(title, xpos, ypos, width, height, flags);
 		if (window)
 		{
 			std::cout << "Window created" << std::endl;
@@ -28,6 +31,7 @@ void Game_Loop::init(const char *title, int xpos, int ypos, int width, int heigh
 		renderer = SDL_CreateRenderer(window, -1, 0);
 		if (renderer)
 		{
+			SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 			std::cout << "Renderer Created" << std::endl;
 		}
 
@@ -54,10 +58,22 @@ void Game_Loop::handleEvents()
 }
 
 void Game_Loop::update()
-{}
+{
+	count++;
+	std::cout << count << std::endl;
+}
 
 void Game_Loop::render()
-{}
+{
+	SDL_RenderClear(renderer);
+	// Add Stuff to render
+	SDL_RenderPresent(renderer);
+}
 
 void Game_Loop::clean()
-{}
+{
+	SDL_DestroyWindow(window);
+	SDL_DestroyRenderer(renderer);
+	SDL_Quit();
+	std::cout << "Game Data Cleared." << std::endl;
+}
