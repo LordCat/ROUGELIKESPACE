@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="backgroud.cpp" />
     <ClCompile Include="fpsCounter.cpp" />
+    <ClCompile Include="GameLoop.cpp" />
     <ClCompile Include="levelData.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
@@ -148,6 +149,7 @@
     <ClInclude Include="backgroud.h" />
     <ClInclude Include="defines.h" />
     <ClInclude Include="fpsCounter.h" />
+    <ClInclude Include="Game_Loop.h" />
     <ClInclude Include="levelData.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
