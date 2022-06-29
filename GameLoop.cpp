@@ -1,7 +1,11 @@
 #define SDL_MAIN_HANDLED
 
 #include "Game_Loop.h"
+#include "TextureManager.h"
 #include "SDL.h"
+
+SDL_Texture* playerTex;
+SDL_Rect scrR, destR;
 
 Game_Loop::Game_Loop()
 {}
@@ -40,6 +44,8 @@ void Game_Loop::init(const char *title, int xpos, int ypos, int width, int heigh
 	else {
 		isRunning = false;
 	}
+
+	playerTex = TextureManager::LoadTexture("DrPlaceHolder.png", renderer);
 }
 
 void Game_Loop::handleEvents()
@@ -59,7 +65,13 @@ void Game_Loop::handleEvents()
 
 void Game_Loop::update()
 {
+	//Keep track of frames
 	count++;
+	//update texture positon
+	destR.h = 64;
+	destR.w = 64;
+	destR.x = count;
+	//output total frames since initialization
 	std::cout << count << std::endl;
 }
 
@@ -67,6 +79,8 @@ void Game_Loop::render()
 {
 	SDL_RenderClear(renderer);
 	// Add Stuff to render
+	//Render Dr. PlaceHolder
+	SDL_RenderCopy(renderer, playerTex, NULL, &destR);
 	SDL_RenderPresent(renderer);
 }
 
