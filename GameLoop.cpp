@@ -4,6 +4,7 @@
 #include "TextureManager.h"
 #include "SDL.h"
 
+
 gameObject* player;
 gameObject* enemy;
 //instantiate A single render
