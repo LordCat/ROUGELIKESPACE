@@ -152,10 +152,8 @@
     <ClInclude Include="fpsCounter.h" />
     <ClInclude Include="Game_Loop.h" />
     <ClInclude Include="levelData.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="TextureManager.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\..\..\..\Desktop\Assets\DrPlaceHolder.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
