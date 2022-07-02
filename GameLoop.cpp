@@ -8,6 +8,8 @@
 gameObject* player;
 gameObject* enemy;
 
+SDL_Renderer* Game_Loop::renderer = nullptr;
+
 Game_Loop::Game_Loop()
 {}
 
@@ -46,8 +48,8 @@ void Game_Loop::init(const char *title, int xpos, int ypos, int width, int heigh
 		isRunning = false;
 	}
 
-	player = new gameObject("assets/DrP.png", renderer);
-	enemy = new gameObject("assets/BennyG.png", renderer);
+	player = new gameObject("assets//DrP.png", 0, 0);
+	enemy = new gameObject("assets//BennyG.png", 50, 50);
 }
 
 void Game_Loop::handleEvents()
