@@ -5,10 +5,17 @@
 #include "SDL.h"
 #include "gameObject.h"
 
+
+//instantiate A single render
+SDL_Renderer* Game_Loop::renderer = nullptr;
+
+
+gameObject* enemy;
 gameObject* player;
 gameObject* enemy;
 
 SDL_Renderer* Game_Loop::renderer = nullptr;
+
 
 Game_Loop::Game_Loop()
 {}
@@ -50,6 +57,7 @@ void Game_Loop::init(const char *title, int xpos, int ypos, int width, int heigh
 
 	player = new gameObject("assets//DrP.png", 0, 0);
 	enemy = new gameObject("assets//BennyG.png", 50, 50);
+
 }
 
 void Game_Loop::handleEvents()
@@ -72,7 +80,7 @@ void Game_Loop::update()
 	//Keep track of frames
 	count++;
 	player->Update();
-	enemy->Update();
+
 	std::cout << count << std::endl;
 }
 
@@ -83,6 +91,7 @@ void Game_Loop::render()
 	//Render Dr. PlaceHolder
 	player->Render();
 	enemy->Render();
+r
 	SDL_RenderPresent(renderer);
 }
 

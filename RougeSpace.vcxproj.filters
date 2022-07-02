@@ -1,6 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+
+    <ClCompile Include="backgroud.cpp" />
+    <ClCompile Include="fpsCounter.cpp" />
+    <ClCompile Include="GameLoop.cpp" />
+    <ClCompile Include="levelData.cpp" />
+    <ClCompile Include="Main.cpp" />
+
     <Filter Include="Source Files">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
@@ -16,6 +23,7 @@
     <Filter Include="assets">
       <UniqueIdentifier>{f02a8bf9-09e9-4a66-bfb3-418424b25934}</UniqueIdentifier>
     </Filter>
+
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -70,5 +78,6 @@
     <Image Include="assets\DrP.png">
       <Filter>assets</Filter>
     </Image>
+
   </ItemGroup>
 </Project>
