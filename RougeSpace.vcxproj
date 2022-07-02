@@ -157,6 +157,12 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="TextureManager.h" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Image Include="assets\BennyG.png" />
+    <Image Include="assets\DrP.png" />
+  </ItemGroup>
+
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

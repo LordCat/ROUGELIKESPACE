@@ -12,6 +12,9 @@ SDL_Renderer* Game_Loop::renderer = nullptr;
 
 gameObject* enemy;
 gameObject* player;
+gameObject* enemy;
+
+SDL_Renderer* Game_Loop::renderer = nullptr;
 
 
 Game_Loop::Game_Loop()
@@ -78,8 +81,6 @@ void Game_Loop::update()
 	count++;
 	player->Update();
 
-	enemy->Update();
-
 	std::cout << count << std::endl;
 }
 
@@ -90,7 +91,7 @@ void Game_Loop::render()
 	//Render Dr. PlaceHolder
 	player->Render();
 	enemy->Render();
-  
+r
 	SDL_RenderPresent(renderer);
 }
 

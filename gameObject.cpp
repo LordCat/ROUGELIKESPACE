@@ -16,9 +16,10 @@ void gameObject::Update()
 	xpos++;
 	ypos++;
 
+
 	srcRect.h = 30;
 	srcRect.w = 30;
-
+  
 	srcRect.x = 0;
 	srcRect.y = 0;
 
@@ -31,6 +32,7 @@ void gameObject::Update()
 
 void gameObject::Render()
 {
-	SDL_RenderCopy(Game_Loop::renderer, objTexture, &srcRect, &destRect);
+
+	SDL_RenderCopy(Game_Loop::renderer,objTexture, &srcRect, &destRect);
 
 }
