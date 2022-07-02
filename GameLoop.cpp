@@ -6,6 +6,7 @@
 #include "gameObject.h"
 
 gameObject* player;
+gameObject* enemy;
 
 Game_Loop::Game_Loop()
 {}
@@ -45,7 +46,8 @@ void Game_Loop::init(const char *title, int xpos, int ypos, int width, int heigh
 		isRunning = false;
 	}
 
-	player = new gameObject("DrPlaceHolder.png", renderer);
+	player = new gameObject("assets/DrP.png", renderer);
+	enemy = new gameObject("assets/BennyG.png", renderer);
 }
 
 void Game_Loop::handleEvents()
@@ -68,6 +70,7 @@ void Game_Loop::update()
 	//Keep track of frames
 	count++;
 	player->Update();
+	enemy->Update();
 	std::cout << count << std::endl;
 }
 
@@ -77,6 +80,7 @@ void Game_Loop::render()
 	// Add Stuff to render
 	//Render Dr. PlaceHolder
 	player->Render();
+	enemy->Render();
 	SDL_RenderPresent(renderer);
 }
 
