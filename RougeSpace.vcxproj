@@ -145,6 +145,7 @@
     <ClCompile Include="gameObject.cpp" />
     <ClCompile Include="levelData.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Map.cpp" />
     <ClCompile Include="TextureManager.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -154,15 +155,14 @@
     <ClInclude Include="gameObject.h" />
     <ClInclude Include="Game_Loop.h" />
     <ClInclude Include="levelData.h" />
+    <ClInclude Include="Map.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="TextureManager.h" />
   </ItemGroup>
-
   <ItemGroup>
     <Image Include="assets\BennyG.png" />
     <Image Include="assets\DrP.png" />
   </ItemGroup>
-
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
