@@ -86,6 +86,12 @@
     <ClInclude Include="Map.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ECS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\BennyG.png">

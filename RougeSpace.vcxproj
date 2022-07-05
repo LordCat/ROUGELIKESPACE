@@ -150,7 +150,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="backgroud.h" />
+    <ClInclude Include="Component.h" />
     <ClInclude Include="defines.h" />
+    <ClInclude Include="ECS.h" />
     <ClInclude Include="fpsCounter.h" />
     <ClInclude Include="gameObject.h" />
     <ClInclude Include="Game_Loop.h" />
