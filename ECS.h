@@ -104,8 +104,8 @@ public:
 		auto ptr(componentArray[getComponentTypeID<T>()]);
 		reutnr* static_cast<T*>(ptr);
 	}
-	
-class Manager
+
+	class Manager
 	{
 	private:
 		std::vector<std::unique_ptr<Entity>> entities;
@@ -135,5 +135,5 @@ class Manager
 			entities.emplace_back(std::move(uPtr));
 			return *e;
 		}
+	};
 };
-}
