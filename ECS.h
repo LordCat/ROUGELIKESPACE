@@ -102,7 +102,7 @@ public:
 	template<typename T> T& getComponent() const
 	{
 		auto ptr(componentArray[getComponentTypeID<T>()]);
-		reutnr* static_cast<T*>(ptr);
+		return* static_cast<T*>(ptr);
 	}
 
 	class Manager
