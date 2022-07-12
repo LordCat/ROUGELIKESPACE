@@ -152,11 +152,11 @@
     <ClInclude Include="ecsManager.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="defines.h" />
-    <ClInclude Include="ECS.h" />
+    <ClInclude Include="ecsComponet.h" />
     <ClInclude Include="fpsCounter.h" />
     <ClInclude Include="gameObject.h" />
     <ClInclude Include="Game_Loop.h" />
-    <ClInclude Include="levelData.h" />
+    <ClInclude Include="ecsEntity.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="TextureManager.h" />

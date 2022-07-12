@@ -1,5 +1,12 @@
 #pragma once
-#include "ECS.h"
+#include <iostream>
+#include <vector>
+#include <memory>
+#include <algorithm>
+#include <bitset>
+#include <array>
+
+#include "ecsEntity.h"
 
 class Manager
 {

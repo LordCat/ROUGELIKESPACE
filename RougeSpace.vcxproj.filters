@@ -74,7 +74,7 @@
     <ClInclude Include="defines.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="levelData.h">
+    <ClInclude Include="ecsEntity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="gameObject.h">
@@ -86,7 +86,7 @@
     <ClInclude Include="Map.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ECS.h">
+    <ClInclude Include="ecsComponet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Component.h">
