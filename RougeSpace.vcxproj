@@ -149,7 +149,7 @@
     <ClCompile Include="TextureManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="backgroud.h" />
+    <ClInclude Include="ecsManager.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="defines.h" />
     <ClInclude Include="ECS.h" />
