@@ -28,9 +28,9 @@ int level1[20][25] = {
 
 Map::Map()
 {
-	dirt = TextureManager::LoadTexture(/*Load texture */);
-	grass = TextureManager::LoadTexture(/*Load texture*/);
-	water = TextureManager::LoadTexture(/*Load texture*/);
+	dirt = TextureManager::LoadTexture("assets/earth.png");
+	grass = TextureManager::LoadTexture("assets/grass.png");
+	water = TextureManager::LoadTexture("assets/water.png");
 
 	LoadMap(level1);
 
