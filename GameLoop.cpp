@@ -4,6 +4,7 @@
 #include "TextureManager.h"
 #include "SDL.h"
 #include "gameObject.h"
+#include "Map.h"
 
 
 //instantiate A single render
@@ -12,7 +13,7 @@ SDL_Renderer* Game_Loop::renderer = nullptr;
 
 gameObject* player;
 gameObject* enemy;
-
+Map* map;
 
 Game_Loop::Game_Loop()
 {}
@@ -54,7 +55,7 @@ void Game_Loop::init(const char *title, int xpos, int ypos, int width, int heigh
 
 	player = new gameObject("assets//DrP.png", 0, 0);
 	enemy = new gameObject("assets//BennyG.png", 50, 50);
-
+	map = new Map();
 }
 
 void Game_Loop::handleEvents()
@@ -78,12 +79,16 @@ void Game_Loop::update()
 	count++;
 	player->Update();
 	enemy->Update();
+	map->DrawMap();
 	std::cout << count << std::endl;
 }
 
 void Game_Loop::render()
 {
 	SDL_RenderClear(renderer);
+
+	//render map
+	map->DrawMap();
 	// Add Stuff to render
 	//Render Dr. PlaceHolder
 	player->Render();
