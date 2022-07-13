@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ecsManager.h"
-#include "ecsComponet.h"
+#include "ecsComponent.h"
 
 
 class Entity
@@ -24,7 +24,7 @@ public:
 	void draw() {}
 	//check if the component is active or not
 	bool isActive() const { return active; }
-	//A entity needs to be destoryed in order of active to be set to false 
+	//A entity needs to be destoryed in order for active flag to be set to false 
 	void destory() { active = false; }
 	//Check if an entity has a component
 	template<typename T> bool hasComponent() const
