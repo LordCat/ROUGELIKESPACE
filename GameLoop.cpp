@@ -6,6 +6,9 @@
 #include "gameObject.h"
 #include "Map.h"
 
+#include "ecsManager.h"
+#include "compPosition.h"
+
 
 //instantiate A single render
 SDL_Renderer* Game_Loop::renderer = nullptr;
@@ -14,6 +17,9 @@ SDL_Renderer* Game_Loop::renderer = nullptr;
 gameObject* player;
 gameObject* enemy;
 Map* map;
+
+Manager manager;
+auto& newPlayer(manager.addEntity());
 
 Game_Loop::Game_Loop()
 {}
@@ -56,6 +62,8 @@ void Game_Loop::init(const char *title, int xpos, int ypos, int width, int heigh
 	player = new gameObject("assets//DrP.png", 0, 0);
 	enemy = new gameObject("assets//BennyG.png", 50, 50);
 	map = new Map();
+
+	newPlayer.addComponent<compPosition>();
 }
 
 void Game_Loop::handleEvents()
@@ -79,8 +87,12 @@ void Game_Loop::update()
 	count++;
 	player->Update();
 	enemy->Update();
-	map->DrawMap();
-	std::cout << count << std::endl;
+	manager.update();
+
+	//map->DrawMap();
+	//std::cout << count << std::endl;
+	std::cout << newPlayer.getComponent<compPosition>().x() << "," <<
+		newPlayer.getComponent<compPosition>().y() << std::endl;
 }
 
 void Game_Loop::render()

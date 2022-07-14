@@ -9,14 +9,13 @@
 * 
 * -LordCat July 5th 2022
 */
+//#include "ecsManager.h"
 #include "ecsManager.h"
 #include "ecsEntity.h"
 
-//define classes 
-//I'm using them both in the same file but this should probally be seperated
-//into two. Please bear with me for now.
 
 class Component;
+class Entity;
 
 using ComponentID = std::size_t;
 
@@ -29,7 +28,7 @@ inline ComponentID getComponentTypeID()
 template <typename T> inline ComponentID getComponentTypeID() noexcept
 {
 	static ComponentID typeID = getComponentTypeID();
-	return typeID();
+	return typeID;
 }
 
 constexpr std::size_t maxComponents = 32;
@@ -41,7 +40,7 @@ using ComponentArray = std::array<Component*, maxComponents>;
 class Component
 {
 public:
-	Entity* entity;
+	Entity* Entity;
 
 	virtual void init() {}
 	virtual void update() {}

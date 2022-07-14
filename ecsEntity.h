@@ -1,7 +1,9 @@
 #pragma once
 
+
 #include "ecsManager.h"
 #include "ecsComponent.h"
+
 
 
 class Entity
@@ -29,7 +31,7 @@ public:
 	//Check if an entity has a component
 	template<typename T> bool hasComponent() const
 	{
-		return ComponentBitset[getComponentID<T>];
+		return ComponentBitset[getComponentID<T>()];
 	}
 
 	template<typename T, typename... TArgs>
@@ -41,8 +43,8 @@ public:
 		components.emplace_back(std::move(uPtr));
 		//Getting out componentArray to set the components to C
 
-		componentArray[getComponentTypeID<T>()] = c;
-		ComponentBitset[getComponentTypeID<T>()] = true;
+		ComponentArray[getComponentTypeID] = c;
+		ComponentBitset[getComponentTypeID ] = true;
 
 		c->init();
 		return *c;

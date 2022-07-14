@@ -1,4 +1,5 @@
 #pragma once
+
 #include <iostream>
 #include <vector>
 #include <memory>
@@ -7,6 +8,7 @@
 #include <array>
 
 #include "ecsEntity.h"
+#include "ecsComponent.h"
 
 class Manager
 {
