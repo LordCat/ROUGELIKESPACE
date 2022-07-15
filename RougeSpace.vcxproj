@@ -139,11 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ecsComponent.cpp" />
     <ClCompile Include="fpsCounter.cpp" />
     <ClCompile Include="GameLoop.cpp" />
-    <ClCompile Include="gameObject.cpp" />
-    <ClCompile Include="ecsManager.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="TextureManager.cpp" />
@@ -155,7 +152,7 @@
     <ClInclude Include="defines.h" />
     <ClInclude Include="ecsComponent.h" />
     <ClInclude Include="fpsCounter.h" />
-    <ClInclude Include="gameObject.h" />
+    <ClInclude Include="compSprite.h" />
     <ClInclude Include="Game_Loop.h" />
     <ClInclude Include="ecsEntity.h" />
     <ClInclude Include="Map.h" />

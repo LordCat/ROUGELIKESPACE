@@ -9,6 +9,8 @@
 
 #include "ecsEntity.h"
 #include "ecsComponent.h"
+#include "compPosition.h"
+#include "TextureManager.h"
 
 class Manager
 {

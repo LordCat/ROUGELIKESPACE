@@ -3,7 +3,6 @@
 #include "Game_Loop.h"
 #include "TextureManager.h"
 #include "SDL.h"
-#include "gameObject.h"
 #include "Map.h"
 
 #include "ecsManager.h"
@@ -14,8 +13,7 @@
 SDL_Renderer* Game_Loop::renderer = nullptr;
 
 
-gameObject* player;
-gameObject* enemy;
+
 Map* map;
 
 Manager manager;
@@ -59,8 +57,7 @@ void Game_Loop::init(const char *title, int xpos, int ypos, int width, int heigh
 		isRunning = false;
 	}
 
-	player = new gameObject("assets//DrP.png", 0, 0);
-	enemy = new gameObject("assets//BennyG.png", 50, 50);
+	
 	map = new Map();
 
 	newPlayer.addComponent<compPosition>();
@@ -85,8 +82,6 @@ void Game_Loop::update()
 {
 	//Keep track of frames
 	count++;
-	player->Update();
-	enemy->Update();
 	manager.update();
 
 	//map->DrawMap();
@@ -103,8 +98,8 @@ void Game_Loop::render()
 	map->DrawMap();
 	// Add Stuff to render
 	//Render Dr. PlaceHolder
-	player->Render();
-	enemy->Render();
+	//player->Render();
+	//enemy->Render();
 	SDL_RenderPresent(renderer);
 }
 

@@ -22,15 +22,18 @@
     <ClCompile Include="GameLoop.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <Filter Include="Header Files\ECS">
+      <UniqueIdentifier>{77ecfde9-0f5e-43ea-9c9b-5c7ca3db7838}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ECS\components">
+      <UniqueIdentifier>{ac0dde21-3ef6-4638-8514-18f66f2337d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ECS\Core">
+      <UniqueIdentifier>{d6dade19-ab8d-46b7-a9db-e577406d13d6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="backgroud.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="levelData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="fpsCounter.cpp">
@@ -42,19 +45,10 @@
     <ClCompile Include="TextureManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="gameObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Map.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ecsComponent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ecsManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -65,19 +59,10 @@
     <ClInclude Include="TextureManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ecsManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="fpsCounter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="defines.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ecsEntity.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="gameObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
@@ -86,14 +71,23 @@
     <ClInclude Include="Map.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Component.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="ecsComponent.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\ECS\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ecsEntity.h">
+      <Filter>Header Files\ECS\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="ecsManager.h">
+      <Filter>Header Files\ECS\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Header Files\ECS\components</Filter>
     </ClInclude>
     <ClInclude Include="compPosition.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\ECS\components</Filter>
+    </ClInclude>
+    <ClInclude Include="compSprite.h">
+      <Filter>Header Files\ECS\components</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
