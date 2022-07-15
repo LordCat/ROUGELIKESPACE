@@ -4,10 +4,11 @@
 #include "SDL.h"
 
 
+
 class compSprite : public Component
 {
 private:
-	compPosition *position;
+	compTransform *transform;
 	SDL_Texture *texture;
 	SDL_Rect srcRect, destRect;
 
@@ -22,7 +23,7 @@ public:
 
 	void init() override
 	{
-		position = &Entity->getComponent<compPosition>();
+		transform = &Entity->getComponent<compTransform>();
 		srcRect.x = srcRect.y = 0;
 		srcRect.w = srcRect.h = 64;
 		destRect.w = destRect.h = 64;
@@ -30,8 +31,8 @@ public:
 
 	void update() override
 	{
-		destRect.x = position->x();
-		destRect.y = position->y();
+		destRect.x = (int)transform->position.x;
+		destRect.y = (int)transform->position.y;
 
 	}
 

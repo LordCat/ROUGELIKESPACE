@@ -4,6 +4,7 @@
 #include "TextureManager.h"
 #include "SDL.h"
 #include "Map.h"
+#include "vector2D.h"
 
 #include "ecsManager.h"
 
@@ -61,10 +62,10 @@ void Game_Loop::init(const char *title, int xpos, int ypos, int width, int heigh
 	
 	map = new Map();
 
-	player.addComponent<compPosition>(0, 0);
+	player.addComponent<compTransform>(0, 0);
 	player.addComponent<compSprite>("assets/DrP.png");
 
-	enemy.addComponent<compPosition>(50, 50);
+	enemy.addComponent<compTransform>(50, 50);
 	enemy.addComponent<compSprite>("assets/BennyG.png");
 
 
@@ -88,8 +89,10 @@ void Game_Loop::handleEvents()
 void Game_Loop::update()
 {
 	//Keep tra of frames
-	//manager.refresh();
+	manager.refresh();
 	manager.update();
+	player.getComponent<compTransform>().position.Add(vector2D(0, 5));
+	enemy.getComponent<compTransform>().position.Add(vector2D(5, 5));
 
 	
 }

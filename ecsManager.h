@@ -9,8 +9,8 @@
 
 #include "ecsEntity.h"
 #include "ecsComponent.h"
-#include "compPosition.h"
-#include "compSprite.h"
+
+#include "Component.h"
 
 #include "TextureManager.h"
 

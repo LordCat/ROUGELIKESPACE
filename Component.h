@@ -1,2 +1,4 @@
 #pragma once
-/*CHECK OUT ECS SYSTEMS BEFORE YOU DARE WRITE MORE*/
+
+#include "compTransform.h"
+#include "compSprite.h"

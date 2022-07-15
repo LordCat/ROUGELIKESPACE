@@ -51,6 +51,9 @@
     <ClCompile Include="Map.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="vector2D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game_Loop.h">
@@ -83,11 +86,14 @@
     <ClInclude Include="Component.h">
       <Filter>Header Files\ECS\components</Filter>
     </ClInclude>
-    <ClInclude Include="compPosition.h">
+    <ClInclude Include="compTransform.h">
       <Filter>Header Files\ECS\components</Filter>
     </ClInclude>
     <ClInclude Include="compSprite.h">
       <Filter>Header Files\ECS\components</Filter>
+    </ClInclude>
+    <ClInclude Include="vector2D.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

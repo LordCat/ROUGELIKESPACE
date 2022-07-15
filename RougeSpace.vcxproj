@@ -144,9 +144,10 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="vector2D.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="compPosition.h" />
+    <ClInclude Include="compTransform.h" />
     <ClInclude Include="ecsManager.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="defines.h" />
@@ -158,6 +159,7 @@
     <ClInclude Include="Map.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="vector2D.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\BennyG.png" />

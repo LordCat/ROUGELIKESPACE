@@ -19,9 +19,12 @@ public:
 	void update()
 	{
 		for (auto& c : components) c->update();
+		
+	}
+	void draw() 
+	{
 		for (auto& c : components) c->draw();
 	}
-	void draw() {}
 	//check if the component is active or not
 	bool isActive() const { return active; }
 	//A entity needs to be destoryed in order for active flag to be set to false 
