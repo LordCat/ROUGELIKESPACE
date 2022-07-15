@@ -28,14 +28,14 @@ inline ComponentID getComponentTypeID()
 template <typename T> inline ComponentID getComponentTypeID() noexcept
 {
 	static ComponentID typeID = getComponentTypeID();
-	return typeID;
+	return typeID();
 }
 
-constexpr std::size_t maxComponents = 32;
+//constexpr std::size_t maxComponents = 32;
 
-using ComponentBitset = std::bitset<maxComponents>;
+//using ComponentBitset = std::bitset<maxComponents>;
 
-using ComponentArray = std::array<Component*, maxComponents>;
+//using ComponentArray = std::array<Component*, maxComponents>;
 
 class Component
 {

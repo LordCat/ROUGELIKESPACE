@@ -4,7 +4,11 @@
 #include "ecsManager.h"
 #include "ecsComponent.h"
 
+constexpr std::size_t maxComponents = 32;
 
+using ComponentBitset = std::bitset<maxComponents>;
+
+using ComponentArray = std::array<Component*, maxComponents>;
 
 class Entity
 {
@@ -31,7 +35,7 @@ public:
 	//Check if an entity has a component
 	template<typename T> bool hasComponent() const
 	{
-		return ComponentBitset[getComponentID<T>()];
+		return ComponentBitset[getComponentID<T>];
 	}
 
 	template<typename T, typename... TArgs>
