@@ -4,11 +4,6 @@
 #include "ecsManager.h"
 #include "ecsComponent.h"
 
-constexpr std::size_t maxComponents = 32;
-
-using ComponentBitset = std::bitset<maxComponents>;
-
-using ComponentArray = std::array<Component*, maxComponents>;
 
 class Entity
 {
@@ -18,7 +13,6 @@ private:
 	std::vector<std::unique_ptr<Component>> components;
 
 	ComponentArray componentArray;
-
 	ComponentBitset componentBitSet;
 
 public:
@@ -35,20 +29,20 @@ public:
 	//Check if an entity has a component
 	template<typename T> bool hasComponent() const
 	{
-		return ComponentBitset[getComponentID<T>];
+		return componentBitSet[getComponentTypeID<T>()];
 	}
 
 	template<typename T, typename... TArgs>
 	T& addComponent(TArgs&&... mArgs)
 	{
 		T* c(new T(std::forward<TArgs>(mArgs)...));
-		c->entity = this;
+		c->Entity = this;
 		std::unique_ptr<Component> uPtr{ c };
 		components.emplace_back(std::move(uPtr));
 		//Getting out componentArray to set the components to C
 
-		ComponentArray[getComponentTypeID] = c;
-		ComponentBitset[getComponentTypeID ] = true;
+		componentArray[getComponentTypeID<T>()] = c;
+		componentBitSet[getComponentTypeID<T>()] = true;
 
 		c->init();
 		return *c;
