@@ -9,7 +9,6 @@
 * 
 * -LordCat July 5th 2022
 */
-//#include "ecsManager.h"
 #include "ecsManager.h"
 #include "ecsEntity.h"
 
@@ -31,11 +30,11 @@ template <typename T> inline ComponentID getComponentTypeID() noexcept
 	return typeID();
 }
 
-//constexpr std::size_t maxComponents = 32;
+constexpr std::size_t maxComponents = 32;
 
-//using ComponentBitset = std::bitset<maxComponents>;
+using ComponentBitset = std::bitset<maxComponents>;
 
-//using ComponentArray = std::array<Component*, maxComponents>;
+using ComponentArray = std::array<Component*, maxComponents>;
 
 class Component
 {
