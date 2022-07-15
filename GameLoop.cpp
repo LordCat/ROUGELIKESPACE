@@ -6,7 +6,7 @@
 #include "Map.h"
 
 #include "ecsManager.h"
-#include "compPosition.h"
+
 
 
 //instantiate A single render
@@ -17,7 +17,8 @@ SDL_Renderer* Game_Loop::renderer = nullptr;
 Map* map;
 
 Manager manager;
-auto& newPlayer(manager.addEntity());
+auto& player(manager.addEntity());
+auto& enemy(manager.addEntity());
 
 Game_Loop::Game_Loop()
 {}
@@ -60,7 +61,13 @@ void Game_Loop::init(const char *title, int xpos, int ypos, int width, int heigh
 	
 	map = new Map();
 
-	newPlayer.addComponent<compPosition>();
+	player.addComponent<compPosition>(0, 0);
+	player.addComponent<compSprite>("assets/DrP.png");
+
+	enemy.addComponent<compPosition>(50, 50);
+	enemy.addComponent<compSprite>("assets/BennyG.png");
+
+
 }
 
 void Game_Loop::handleEvents()
@@ -80,14 +87,11 @@ void Game_Loop::handleEvents()
 
 void Game_Loop::update()
 {
-	//Keep track of frames
-	count++;
+	//Keep tra of frames
+	//manager.refresh();
 	manager.update();
 
-	//map->DrawMap();
-	//std::cout << count << std::endl;
-	std::cout << newPlayer.getComponent<compPosition>().x() << "," <<
-		newPlayer.getComponent<compPosition>().y() << std::endl;
+	
 }
 
 void Game_Loop::render()
@@ -96,10 +100,9 @@ void Game_Loop::render()
 
 	//render map
 	map->DrawMap();
-	// Add Stuff to render
-	//Render Dr. PlaceHolder
-	//player->Render();
-	//enemy->Render();
+
+	manager.draw();
+
 	SDL_RenderPresent(renderer);
 }
 

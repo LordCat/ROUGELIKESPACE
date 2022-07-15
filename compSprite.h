@@ -24,7 +24,7 @@ public:
 	{
 		position = &Entity->getComponent<compPosition>();
 		srcRect.x = srcRect.y = 0;
-		srcRect.w = srcRect.h = 32;
+		srcRect.w = srcRect.h = 64;
 		destRect.w = destRect.h = 64;
 	}
 
