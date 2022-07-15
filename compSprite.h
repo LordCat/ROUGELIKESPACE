@@ -2,6 +2,7 @@
 
 #include"ecsManager.h"
 #include "SDL.h"
+#include "TextureManager.h"
 
 
 

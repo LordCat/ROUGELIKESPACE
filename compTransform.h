@@ -8,6 +8,11 @@ class compTransform : public Component
 public:
 
 	vector2D position;
+	vector2D velocity;
+
+	int speed = 3;
+
+
 
 	compTransform()
 	{
@@ -21,10 +26,15 @@ public:
 		position.y = y;
 	}
 
-
+	void init() override
+	{
+		velocity.x = 0;
+		velocity.y = 0;
+	}
 	void update() override
 	{
-		
+		position.x += velocity.x * speed;
+		position.y += velocity.y * speed;
 	}
 
 };
