@@ -98,6 +98,9 @@
     <ClInclude Include="vector2D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="compCollider.h">
+      <Filter>Header Files\ECS\components</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\BennyG.png">

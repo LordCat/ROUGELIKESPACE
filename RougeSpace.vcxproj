@@ -148,6 +148,7 @@
     <ClCompile Include="vector2D.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="compCollider.h" />
     <ClInclude Include="compTransform.h" />
     <ClInclude Include="ecsManager.h" />
     <ClInclude Include="Component.h" />
