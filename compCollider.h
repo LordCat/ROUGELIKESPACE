@@ -20,6 +20,11 @@ public:
 
 	compTransform* transform;
 
+	compCollider(std::string t)
+	{
+		tag = t;
+	}
+
 	void init() override
 	{
 		if (!Entity->hasComponent<compTransform>())
@@ -32,8 +37,8 @@ public:
 
 	void update() override
 	{
-		collider.x = transform->position.x;
-		collider.y = transform-> position.y;
+		collider.x = static_cast<int>(transform->position.x);
+		collider.y = static_cast<int>(transform-> position.y);
 		collider.w = transform->width * transform->scale;
 		collider.h = transform->height * transform->scale;
 	}

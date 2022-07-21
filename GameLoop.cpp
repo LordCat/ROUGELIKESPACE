@@ -8,7 +8,7 @@
 
 #include "ecsManager.h"
 #include "ecsController.h"
-
+#include "Collision.h"
 
 
 //instantiate A single render and pass it by reference ?
@@ -21,6 +21,7 @@ Map* map;
 
 Manager manager;
 auto& player(manager.addEntity());
+auto& wall(manager.addEntity());
 auto& enemy(manager.addEntity());
 
 Game_Loop::Game_Loop()
@@ -64,9 +65,14 @@ void Game_Loop::init(const char *title, int xpos, int ypos, int width, int heigh
 	
 	map = new Map();
 
-	player.addComponent<compTransform>(0, 0);
+	player.addComponent<compTransform>(2);
 	player.addComponent<compSprite>("assets/DrP.png");
 	player.addComponent<ecsController>();
+	player.addComponent<compCollider>("player");
+
+	wall.addComponent<compTransform>(300.0f, 300.0f, 300, 20, 1);
+	wall.addComponent<compSprite>("assets/water.png");
+	wall.addComponent<compCollider>("wall");
 
 	enemy.addComponent<compTransform>(50, 50);
 	enemy.addComponent<compSprite>("assets/BennyG.png");
@@ -94,6 +100,12 @@ void Game_Loop::update()
 
 	manager.refresh();
 	manager.update();
+
+	if (Collision::AABB(player.getComponent<compCollider>().collider,
+		wall.getComponent<compCollider>().collider))
+	{
+		std::cout << "wall hit" << std::endl;
+	}
 }
 
 void Game_Loop::render()
