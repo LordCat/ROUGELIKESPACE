@@ -91,7 +91,7 @@ void Game_Loop::handleEvents()
 
 void Game_Loop::update()
 {
-	//Keep tra of frames
+
 	manager.refresh();
 	manager.update();
 }

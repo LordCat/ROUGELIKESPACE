@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="fpsCounter.cpp" />
+    <ClCompile Include="Collision.cpp" />
     <ClCompile Include="GameLoop.cpp" />
     <ClCompile Include="ecsController.h" />
     <ClCompile Include="Main.cpp" />
@@ -152,7 +152,7 @@
     <ClInclude Include="compTransform.h" />
     <ClInclude Include="ecsManager.h" />
     <ClInclude Include="Component.h" />
-    <ClInclude Include="defines.h" />
+    <ClInclude Include="Collision.h" />
     <ClInclude Include="ecsComponent.h" />
     <ClInclude Include="fpsCounter.h" />
     <ClInclude Include="compSprite.h" />

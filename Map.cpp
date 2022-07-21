@@ -1,5 +1,19 @@
+/* 
+This initilises the integer array that will get passed into Map::LoadMap(int[x, y]);
+Then the constructer has each texture loaded via TextureManager::LoadTexture(filename)
+which then calls Map::LoadMap(int[x,y]) and variables for pixalsize of SDL_Rect x,y. looping trough the arrays rows and colums
+and assign a texture depending on the id in the array. 
+
+// This can certainly be made better but it's just a basic implementation
+I don't think it scales well when I have lots of textures to load.
+
+The destructor obviously destorys the loaded textures when the Map object is destoryed.
+
+*/
+
 #include "Map.h"
 #include "TextureManager.h"
+
 
 int level1[20][25] = {
 	{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
